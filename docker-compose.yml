@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    restart: always
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile-dev
+    container_name: grocerystore-server
+    ports:
+      - 8080:80
+    volumes:
+      - //projects/grocerystore:/srv/src

@@ -1,0 +1,139 @@
+{
+    "status": "SUCCESS",
+    "msg": "SUCCESS",
+    "skus": [
+		{
+            "mSkuType": "cost-per-unit",
+            "mProductId": "prod10000274",
+            "mPrice": "699.99",
+            "mName": "Apple iPhone 11",
+            "mDescription": "All-new dual-camera system with Ultra Wide. Night mode and stunning video quality. Water and dust resistance.1 All-day battery life.2 In six stunning colors. Experience iPhone at 11.",
+            "mOutOfStock": false,
+            "mIsAvailable": true,
+            "mIsOnSale": false,
+			"mIsOnBuyOneTakeOne": false,
+			"mIsOnBuyTwoTakeOne": false
+		},
+		{
+            "mSkuType": "cost-per-unit",
+            "mProductId": "prod10000211",
+            "mPrice": "59.99",
+            "mName": "Cheese",
+            "mDescription": " ",
+            "mOutOfStock": false,
+            "mIsAvailable": true,
+            "mIsOnSale": false,
+			"mIsOnBuyOneTakeOne": false,
+			"mIsOnBuyTwoTakeOne": false
+		},
+		{
+            "mSkuType": "cost-per-unit",
+            "mProductId": "prod10000235",
+            "mPrice": "35",
+            "mName": "Chips",
+            "mDescription": " ",
+            "mOutOfStock": false,
+            "mIsAvailable": true,
+            "mIsOnSale": false,
+			"mIsOnBuyOneTakeOne": false,
+			"mIsOnBuyTwoTakeOne": false
+		},
+		{
+            "mSkuType": "cost-per-unit",
+            "mProductId": "prod10000241",
+            "mPrice": "215",
+            "mName": "Ice Cream",
+            "mDescription": " ",
+            "mOutOfStock": false,
+            "mIsAvailable": true,
+            "mIsOnSale": false,
+			"mIsOnBuyOneTakeOne": false,
+			"mIsOnBuyTwoTakeOne": false
+		},
+		{
+            "mSkuType": "cost-per-unit",
+            "mProductId": "prod10000364",
+            "mPrice": "92",
+            "mName": "Coke",
+            "mDescription": "500 ml",
+            "mOutOfStock": false,
+            "mIsAvailable": true,
+            "mIsOnSale": false,
+			"mIsOnBuyOneTakeOne": false,
+			"mIsOnBuyTwoTakeOne": true
+		},
+		{
+            "mSkuType": "cost-per-unit",
+            "mProductId": "prod10000411",
+            "mPrice": "78",
+            "mName": "Shampoo",
+            "mDescription": "750 ml",
+            "mOutOfStock": false,
+            "mIsAvailable": true,
+            "mIsOnSale": false,
+			"mIsOnBuyOneTakeOne": true,
+			"mIsOnBuyTwoTakeOne": false
+		},
+		{
+            "mSkuType": "cost-per-unit",
+            "mProductId": "prod10000411",
+            "mPrice": "72",
+            "mName": "Milk",
+            "mDescription": "100 ml",
+            "mOutOfStock": false,
+            "mIsAvailable": true,
+            "mIsOnSale": false,
+			"mIsOnBuyOneTakeOne": true,
+			"mIsOnBuyTwoTakeOne": false
+		},
+		{
+            "mSkuType": "cost-per-weight",
+            "mProductId": "prod50000193",
+            "mPrice": "0.045",
+            "mName": "Rice",
+            "mDescription": " ",
+            "mOutOfStock": false,
+            "mIsAvailable": true,
+            "mIsOnSale": false,
+			"mIsOnBuyOneTakeOne": false,
+			"mIsOnBuyTwoTakeOne": false
+		},
+		{
+            "mSkuType": "cost-per-weight",
+            "mProductId": "prod50000198",
+            "mPrice": "0.032",
+            "mName": "Sugar",
+            "mDescription": " ",
+            "mOutOfStock": false,
+            "mIsAvailable": true,
+            "mIsOnSale": false,
+			"mIsOnBuyOneTakeOne": false,
+			"mIsOnBuyTwoTakeOne": false
+		},
+		{
+            "mSkuType": "cost-per-weight",
+            "mProductId": "prod50000201",
+            "mPrice": "0.075",
+            "mName": "Minced Meat",
+            "mDescription": " ",
+            "mOutOfStock": false,
+            "mIsAvailable": true,
+            "mIsOnSale": false,
+			"mIsOnBuyOneTakeOne": false,
+			"mIsOnBuyTwoTakeOne": false
+		},
+		{
+            "mSkuType": "cost-per-weight",
+            "mProductId": "prod50000217",
+            "mPrice": "0.069",
+            "mName": "Fish",
+            "mDescription": " ",
+            "mOutOfStock": false,
+            "mIsAvailable": true,
+            "mIsOnSale": false,
+			"mIsOnBuyOneTakeOne": false,
+			"mIsOnBuyTwoTakeOne": false
+		}
+	
+	]
+}
