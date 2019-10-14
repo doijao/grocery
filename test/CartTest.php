@@ -201,8 +201,7 @@ class CartTest extends TestCase
      */
     public function printReceipt() : void
     {
-       // $this->start();
-        var_dump(static::$cart->printReceipt());
+       var_dump(static::$cart->printReceipt());
         $this->assertEquals(true, true);
     }
 }

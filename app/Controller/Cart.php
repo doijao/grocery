@@ -10,7 +10,7 @@ class Cart extends ItemCollection
      * calculate total amount
      * php 123,456.78
      */
-    public function getTotalAmount()
+    public function getTotalAmount(): string
     {
         return "\nTotal\t:\tphp " . number_format(array_sum($this->totalPrice), 2) ."\n";
     }
@@ -40,16 +40,11 @@ class Cart extends ItemCollection
         return $info;
     }
 
-    function isDecimal($val)
-    {
-        return is_numeric($val) && floor($val) != $val;
-    }
-
     /**
      * calculate item total amount
      * item amount x quantity
      */
-    private function getTotalPrice($key, $calc = true)
+    private function getTotalPrice($key, $calc = true) : float
     {
         $result = array();
         if ($this->getProductWeight($key) != '') {
@@ -64,7 +59,7 @@ class Cart extends ItemCollection
             $this->totalPrice[] = array_sum($result);
         }
         
-        return number_format(array_sum($result), 2);
+        return (float) number_format(array_sum($result), 2);
     }
 
     /**
