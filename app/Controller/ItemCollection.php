@@ -1,27 +1,25 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Collection;
+namespace App\Controller;
 
-class Cart
+class ItemCollection
 {
-    private $items = array();
+    public $items = array();
     
-    private $result = array();
+    protected $result = array();
     
-    private $error_message = "";
+    protected $error_message = "";
 
-    private $totalPrice;
+    protected $totalPrice = array();
 
     public function addItem($obj, $key): void
     {
-        if ($key != null) {
+        if ($obj != null && $key != null) {
             $this->items[$key][] = $obj;
         } else {
-            echo "key is required";
+            $this->error_message = "Missing object or key";
         }
-
-        $this->calcTotalPrice();
     }
 
     public function deleteItem($key): void
@@ -29,7 +27,7 @@ class Cart
         if ($this->keyExist($key)) {
             unset($this->items[$key]);
         } else {
-            echo $this->error_message;
+            $this->error_message = "Failed to remove item with $key key";
         }
     }
 
@@ -38,16 +36,16 @@ class Cart
         if ($this->keyExist($key)) {
             return $this->items[$key];
         } else {
-            echo $this->error_message;
+            $this->error_message = "Failed to get item that has $key key";
         }
     }
 
-    public function itemCount(): int
+    public function countItem($key): int
     {
-        return count($this->items);
+        return count($this->items[$key]);
     }
 
-    private function keyExist($key): bool
+    protected function keyExist($key): bool
     {
         $result = isset($this->items[$key]);
 
@@ -58,6 +56,7 @@ class Cart
         return $result;
     }
 
+    /*
     private function calcTotalPrice(): void
     {
         $total = array();
@@ -143,4 +142,5 @@ class Cart
         $result = "\n" . $name . "\t\t" . $qty_listing . "\t" . number_format($price, 2);
         return $result;
     }
+    */
 }

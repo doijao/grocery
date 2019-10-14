@@ -7,7 +7,7 @@ use App\Controller\ReadJson;
 
 use App\Collection\Product;
 
-use App\Collection\Cart;
+use App\Controller\Cart;
 
 class CartTest extends TestCase
 {
@@ -125,13 +125,9 @@ class CartTest extends TestCase
                     $item['mProductId']
                 );
             }
-        
-            // Validate if getting the expected total price
-            echo "\n".$item['mName'] .
-                    " (₱" . $item['mPrice'] . ")\t x " .
-                    $scanItem['qty'] .
-                    "\t Total ==>" . static::$cart->getTotalPrice();
-
+            
+            echo static::$cart->getProductEntry($item['mProductId']);
+            
             $this->assertEquals(true, true);
         }
     }
@@ -162,10 +158,7 @@ class CartTest extends TestCase
             }
 
             // Validate if getting the expected total price
-            echo "\n".$item['mName'] .
-                    " (₱".($item['mPrice'] * $scanItem['weight']).")\t x ".
-                    $scanItem['qty'] . "\t Total ==>" .
-                    static::$cart->getTotalPrice();
+            echo static::$cart->getProductEntry($item['mProductId']);
            
             $this->assertEquals(true, true);
         }
@@ -197,23 +190,7 @@ class CartTest extends TestCase
             }
        
             // Validate if getting the expected total price
-            echo "\n".$item['mName'] . " (₱".$item['mPrice'].")\t x ". $scanItem['qty'] . "\t";
-            //die('test ' . print_r($item));
-            if ($saleType == 'mIsOnBuyTwoTakeOne') {
-                $name = ' -- buy 2 take 1 ';
-                $freeItem = $scanItem['qty'] - ceil($scanItem['qty'] / 3 * 2);
-            }
-
-            if ($saleType == 'mIsOnBuyOneTakeOne') {
-                $name = ' -- buy 1 take 1  ';
-                $freeItem = $scanItem['qty'] - ceil($scanItem['qty'] / 2 * 1);
-            }
-
-            if (isset($saleType)) {
-                $price = ($freeItem * $item['mPrice']) * -1;
-            }
-
-            echo "\n".$name . " (₱".$price.")\t Total ==>" . static::$cart->getTotalPrice();
+            echo static::$cart->getProductEntry($item['mProductId']);
            
             $this->assertEquals(true, true);
         }
@@ -225,7 +202,7 @@ class CartTest extends TestCase
     public function printReceipt() : void
     {
        // $this->start();
-        var_dump(static::$cart->showReceipt());
+        var_dump(static::$cart->printReceipt());
         $this->assertEquals(true, true);
     }
 }
